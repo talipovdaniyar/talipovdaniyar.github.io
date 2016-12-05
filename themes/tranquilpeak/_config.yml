@@ -35,18 +35,10 @@ sidebar:
             title: global.home
             url: /
             icon: home
-        categories:
-            title: global.categories
-            url: /all-categories
-            icon: bookmark
         tags:
             title: global.tags
             url: /all-tags
             icon: tags
-        archives:
-            title: global.archives
-            url: /all-archives
-            icon: archive
         search:
             title: global.search
             url: /#search
@@ -58,39 +50,22 @@ sidebar:
             url: /#about
             icon: question
     author_links:
-        # github:
-        #     title: global.github
-        #     url: https://github.com/
-        #     icon: github
-        # stack_overflow:
-        #     title: global.stack_overflow
-        #     url: http://stackoverflow.com/users
-        #     icon: stack-overflow
-        # twitter:
-        #     title: global.twitter
-        #     url: https://twitter.com/
-        #     icon: twitter
-        # facebook:
-        #     title: global.facebook
-        #     url: https://facebook.com/
-        #     icon: facebook
-        # google_plus:
-        #     title: global.google_plus
-        #     url: https://plus.google.com/
-        #     icon: google-plus
-        # linked_in:
-        #     title: global.linkedin
-        #     url: https://www.linkedin.com/profile/
-        #     icon: linkedin
-        # mail:
-        #     title: global.mail
-        #     url: mailto:
-        #     icon: envelope-o
-    rss:
-        rss:
-            title: global.rss
-            url: /atom.xml
-            icon: rss
+        github:
+            title: global.github
+            url: https://github.com/talipovdaniyar
+            icon: github
+        twitter:
+            title: global.twitter
+            url: https://twitter.com/DaniyarTalipov
+            icon: twitter
+        linked_in:
+            title: global.linkedin
+            url: https://be.linkedin.com/in/daniyar-talipov-50814baa
+            icon: linkedin
+        mail:
+            title: global.mail
+            url: mailto:
+            icon: envelope-o
 
 
 # Header configuration
