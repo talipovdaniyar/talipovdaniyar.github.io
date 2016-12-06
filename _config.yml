@@ -65,9 +65,6 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: tranquilpeak
 
-plugins:
-  - hexo-algoliasearch
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -79,7 +76,7 @@ deploy:
 algolia:
   appId: "9GA54JS44H"
   apiKey: "116c137516220c450be8704989adb02d"
-  adminApiKey: "c65d99d2fa7f60ea0a10a54c5303b187"
+  adminApiKey: ""
   chunkSize: 5000
   indexName: "sovietbear"
   fields:
