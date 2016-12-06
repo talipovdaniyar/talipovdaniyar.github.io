@@ -81,9 +81,9 @@ algolia:
   indexName: "sovietbear"
   fields:
     - title
+    - date
     - tags
-    - slug
     - excerpt
     - excerpt:strip
-    - photos
-    - gallery
+    - permalink
+    - thumbnailImageUrl
