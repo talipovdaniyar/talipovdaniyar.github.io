@@ -158,18 +158,3 @@ swiftype_install_key:
 fb_admin_ids:
 # Your Facebook app id used to connect your blog with your facebook app account (Facebook Insights). E.g : 9841307
 fb_app_id:
-
-algolia:
-  appId: "9GA54JS44H"
-  apiKey: "116c137516220c450be8704989adb02d"
-  adminApiKey: "c65d99d2fa7f60ea0a10a54c5303b187"
-  chunkSize: 5000
-  indexName: "sovietbear"
-  fields:
-    - title
-    - tags
-    - slug
-    - excerpt
-    - excerpt:strip
-    - photos
-    - gallery
