@@ -80,10 +80,11 @@ algolia:
   chunkSize: 5000
   indexName: "sovietbear"
   fields:
-    - title
-    - date
-    - tags
-    - excerpt
-    - excerpt:strip
-    - permalink
-    - thumbnailImageUrl
+     - title
+     - date
+     - permalink
+     - thumbnailImageUrl
+     - tags
+     - categories
+     - excerpt
+     - excerpt:strip
