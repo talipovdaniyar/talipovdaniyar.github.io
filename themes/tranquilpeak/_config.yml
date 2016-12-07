@@ -44,7 +44,7 @@ sidebar:
             url: /#search
             icon: search
             # `st-search-show-outputs` classes are used to open swiftype search window
-            class: st-search-show-outputs
+            class: open-algolia-search
         about:
             title: global.about
             url: /#about
