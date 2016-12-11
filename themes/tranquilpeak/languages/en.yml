@@ -53,13 +53,13 @@ post:
     toc: "Table of Contents"
     read_more: "Continue reading"
     go_to_website: "Go to website"
-    comment_and_share: "Comment and share"
+    comment_and_share: "Share"
 
 author:
     # Your biography (Markdown and HTML supported)
     bio: "During my studies I developed a passion for programming and software.
     I constantly want to learn new things about the field of Software Development.
     Through various projects, I came in contact with different technologies and
-    programming languages. "
+    programming languages. [Read More](https://talipovdaniyar.github.io/2016/12/11/Hello-Blogging/)"
     # Your job
     job: "Software Enginieer @Realdolmen"
