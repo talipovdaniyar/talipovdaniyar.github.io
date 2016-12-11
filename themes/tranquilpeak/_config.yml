@@ -48,7 +48,7 @@ sidebar:
 
         about-detail:
             title: global.about
-            url: /#about
+            url: /me
             icon: question
 
     author_links:
