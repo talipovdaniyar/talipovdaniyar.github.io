@@ -10,6 +10,8 @@ clearReading: true
 
 I hope you understood the “Hello, World!” reference. If not, “Hello, World!” is often the first program programmers write when they try out a new programming language. It only seemed fitting to name my first blogpost with the traditional “Hello, World!” program in mind.
 
+<!-- more -->
+
 # Who am I?
 My name is Daniyar Talipov, I am programmer from Belgium and IT is my passion. For as long as I can remember I was always surrounded by technology. This eventually led to me getting a bachelor’s degree in Applied Computer Science from Odisee Brussels and land a job as a .NET Software Engineer at RealDolmen.
 
