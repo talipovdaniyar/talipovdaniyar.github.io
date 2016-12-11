@@ -45,7 +45,8 @@ sidebar:
             icon: search
             # `st-search-show-outputs` classes are used to open swiftype search window
             class: open-algolia-search
-        about:
+
+        about-detail:
             title: global.about
             url: /#about
             icon: question
@@ -117,7 +118,7 @@ author:
 # large sidebar is swiped on all lower screens
 # 5: Display header bar on all screens and large sidebar is swiped on large screen
 # 6: Display header bar on all screens and medium sidebar is swiped
-sidebar_behavior: 1
+sidebar_behavior: 2
 # Hide sidebar on all article page to let article take full width to improve reading, and
 # enjoy wide images and cover images. (true: enable, false: disable)
 clear_reading: true

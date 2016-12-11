@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Soviet Bear's Blog
+title: Soviet Waffle's Blog
 subtitle: “Programming is a social activity.” ― Robert C. Martin
 description:
 author: Daniyar Talipov
@@ -76,9 +76,9 @@ deploy:
 algolia:
   appId: "9GA54JS44H"
   apiKey: "116c137516220c450be8704989adb02d"
-  adminApiKey: ""
+  adminApiKey: "95e87154d584f5b28d61fb783a7ad336"
   chunkSize: 5000
-  indexName: "sovietbear"
+  indexName: "sovietwaffle"
   fields:
      - title
      - date
