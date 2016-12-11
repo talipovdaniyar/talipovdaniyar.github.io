@@ -18,7 +18,7 @@ My name is Daniyar Talipov, I am a programmer from Belgium and IT is my passion.
 I am currently working for the Belgian Department of Home Affairs on different applications. In my free time I read books about programming, work on side projects and (still) play video games.
 
 ## Why blogging?
-I am guy that likes to share information and knowledge, especially if it’s helpful to someone. I don't consider myself a guru (yet), however I did notice having a passion and drive to learn new things. This often leads to sleepless weekends, but more often it leads to knowledge.  It only seemed fair, after all these years reading blogs to give back some of that acquired knowledge back to the community through the power of the internet!
+I am a guy that likes to share information and knowledge, especially if it’s helpful to someone. I don't consider myself a guru (yet), however I did notice having a passion and drive to learn new things. This often leads to sleepless weekends, but more often it leads to knowledge.  It only seemed fair, after all these years reading blogs to give back some of that acquired knowledge back to the community through the power of the internet!
 
 ## Why Soviet Waffle?
 After living most of my life in Belgium I consider myself a real Belgian fella and thats where the Waffle part plays its part. However I wasn't born in Belgium, I was born in Kazachstan (once a part of the USSR).
