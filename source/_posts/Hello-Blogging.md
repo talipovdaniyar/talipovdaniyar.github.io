@@ -21,6 +21,6 @@ I am currently working for the Belgian Department of Home Affairs on different a
 I'm a guy that likes to share information and knowledge, especially if it’s helpful to someone. I don't consider myself a guru (yet), however I did notice having a passion and drive to learn new things. This often leads to sleepless weekends, but more often it leads to knowledge.  It only seemed fair, after all these years reading blogs to give back some of that acquired knowledge back to the community through the power of the internet!
 
 ## Why Soviet Waffle?
-After living most of my life in Belgium I consider myself a real Belgian fella and thats where the Waffle part plays its part. However I wasn't born in Belgium, I was born in Kazakhstan (once a part of the Soviet Union).
+After living most of my life in Belgium I consider myself a real Belgian, that's where the Waffle part plays its part. However I wasn't born in Belgium, I was born in Kazakhstan (once a part of the Soviet Union). Combining those two milestones in my life, gave birth to **Soviet Waffle**.
 
 ![soviet-waffle](http://res.cloudinary.com/dcgoisyp0/image/upload/v1481468195/sovietwaffle.png)
