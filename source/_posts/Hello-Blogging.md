@@ -1,7 +1,7 @@
 ---
 title: 'Hello, Blogging!'
 date: 2016-12-11 15:28:15
-thumbnailImage: http://res.cloudinary.com/dcgoisyp0/image/upload/v1481468195/Photo_from_Daniyar_Talipov_u4dc5w.jpg
+thumbnailImage: http://res.cloudinary.com/dcgoisyp0/image/upload/c_scale,q_34,w_196/v1481468195/sovietwaffle.png
 autoThumbnailImage: yes
 tags:
   - Personal
