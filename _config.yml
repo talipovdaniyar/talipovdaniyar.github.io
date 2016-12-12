@@ -12,7 +12,7 @@ timezone: Europe/Brussels
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://talipovdaniyar.github.io
+url: http://sovietwaffle.ninja
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -88,3 +88,5 @@ algolia:
      - categories
      - excerpt
      - excerpt:strip
+
+plugins: hexo-generator-cname
