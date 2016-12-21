@@ -1,7 +1,7 @@
 ---
 title: Hear your TFS Builds fail with a Raspberry Pi Soundboard
 date: 2016-12-19 21:35:54
-thumbnailImage: http://res.cloudinary.com/dcgoisyp0/image/upload/a_44/v1482185390/pi-tfs.png
+thumbnailImage: http://res.cloudinary.com/dcgoisyp0/image/upload/v1482276781/pi-tfs-thumb.png
 autoThumbnailImage: yes
 thumbnailImagePosition: left
 clearReading: true
@@ -21,7 +21,7 @@ keywords:
   - RaspberryPi
   - C#
 ---
-Breaking the build is not the end of the world. What's really important is fixing it as quick as possible and therefore you need a notifier that warns you when a build has failed.
+Breaking the build is not the end of the world. What's really important is noticing it on time and fixing it as quick as possible. Therefore you need a notifier that warns you when a build has failed.
 <!-- excerpt -->
 
 Breaking the build can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and building on it.
@@ -36,32 +36,36 @@ The webservice will be hosted on a RaspberryPi 2 and will be triggered by Team F
 
 ![pi-tfs](http://res.cloudinary.com/dcgoisyp0/image/upload/b_rgb:fff,bo_0px_solid_rgb:000,c_scale,q_100,r_0,w_348/v1482185390/pi-tfs.png)
 
-## 2. RaspberryPI
 By browsing to the IP address of your Pi (Port 8080) you will get the Pi's Dashboard. Under App File Explorer you can add a mp3 file that you wish to play when a build fails. Remember the name and location of the mp3 file.
 
-### 2.1. Code
+## 2. Code
+### 2.1. Project Architecture
+
 To my knowledge there (still) isn’t a native Web Api template for IoT devices. But luckily for us there is a library called [Restup](https://github.com/tomkuijsten/restup) that enables us to create a webservice and host it on a RaspberryPI.
 
-The Solution will contain 2 main projects.
+The Solution will contain 2 projects:
 
-1. The **Soundboard.Api** project (hosting the API and playing the sound and The Soundboard)
+1. The **Soundboard.Api** project (hosting the Soundboard API)
+
 2. The **Soundboard.Startup** project (initialising the API).
 
+<script src="https://gist.github.com/talipovdaniyar/128a4556101207d12401f186125ea2a4.js"></script>
+
+
+### 2.2. Soundboard.Api
+
+#### 2.2.1. Data Transfer Object
+The DTO that TFS will include in the POST call has really a lot of information. You could not only play a sound but even ligth up a red light bulb if a specific developer broke the build.
+
+
+#### 2.2.2. Controller
+
+First we will start of with the Soundboard.Api project, it’s a Windows Portable Library project. After creating the project, include the Restup nuget in your project. Now you should be able to start building the SoundboardController. We have to add some references to Media libraries for playing the sound located on the Raspberry Pi. The rest of the code syntax looks a lot like the ASP.net controllers syntax. Most of the code logic is currently located in the controller but should be moved to a service layer if the logic grows.
+
+Snippet CONTROLLER
 
 
 
-
-
-#### 2.1.1. Soundboard.Api
-First we will create the Soundboard.Api project, it’s a Windows Portable Library project. Include the Restup nuget in the project.
-
-This is what the controller looks like. Most of the code is currently in the controller itself but this is only ment as a starting point. The DTO that TFS will include in the POST call has really a lot of information. You could not only play a sound but even ligth up a red light bulb if a specific developer broke the build.
-
-Snippet controller
-
-We have to add some references to Media libraries for playing the sound located on the Raspberry Pi. The rest of the code syntax looks a lot like the ASP.net controllers syntax.
-
-The
 #### 2.1.2. Soundboard.Startup
 Now we will create the IoT Service project with the following code in the main class.
 
