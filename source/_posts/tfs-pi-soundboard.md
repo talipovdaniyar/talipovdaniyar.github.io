@@ -20,7 +20,7 @@ keywords:
   - RaspberryPi
   - C#
 ---
-Breaking the build is not the end of the world. What's really important is noticing it on time and fixing it as quick as possible. Therefore you need a notifier that warns you when a build has failed.
+Breaking the build is not the end of the world. What's really important is noticing it on time and fixing it as quickly as possible. Therefore you need a notifier that warns you when a build has failed.
 <!-- excerpt -->
 
 Breaking the build can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.
