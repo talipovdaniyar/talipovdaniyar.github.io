@@ -23,7 +23,7 @@ keywords:
 Breaking the build is not the end of the world. What's really important is noticing it on time and fixing it as quickly as possible. Therefore you need a notifier that warns you when a build has failed.
 <!-- excerpt -->
 
-Breaking the build can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.
+Breaking the build, it can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.
 
 ## Fail-Fast
 It's crucial to have a [fail-fast](https://en.wikipedia.org/wiki/Fail-fast) development flow, but that's not always the case. There are alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even [shooting missiles](https://github.com/codedance/Retaliation) at the culprit.
