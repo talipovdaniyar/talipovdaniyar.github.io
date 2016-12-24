@@ -11,7 +11,6 @@ tags:
   - RaspberryPi
   - C#
 
-
 keywords:
   - IoT
   - Windows IoT Core
@@ -24,52 +23,81 @@ keywords:
 Breaking the build is not the end of the world. What's really important is noticing it on time and fixing it as quick as possible. Therefore you need a notifier that warns you when a build has failed.
 <!-- excerpt -->
 
-Breaking the build can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and building on it.
+Breaking the build can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.
 
 ## Fail-Fast
-It's crucial to have a [fail-fast](https://en.wikipedia.org/wiki/Fail-fast) development flow. There are alternatives out there that use different types of communication platforms, that are more team oriented. You can e.g. link build events to a Slack channel or even [shoot missiles](https://github.com/codedance/Retaliation) at the culprit. However I decided to create one of my own. A webservice that plays the sound of Septa Unella's bell if a build fails.
+It's crucial to have a [fail-fast](https://en.wikipedia.org/wiki/Fail-fast) development flow, but that's not always the case. There are alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even [shoot missiles](https://github.com/codedance/Retaliation) at the culprit.
+
+However I decided to build one of my own. A webservice that plays the sound of Septa Unella's bell if a build fails.
 <br>
 <iframe src="//giphy.com/embed/Ob7p7lDT99cd2" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ## 1. Setup
-The webservice will be hosted on a RaspberryPi 2 and will be triggered by Team Foundation Server 2017. We will start with an already configured repository on TFS and a Pi that runs Windows IoT Core. In case you still need to install Windows IoT Core on your Pi you can follow the [Get Started](https://developer.microsoft.com/en-us/windows/iot/GetStarted) instructions.  
+The webservice will be hosted on a RaspberryPi 2 and will be triggered by Team Foundation Server 2017. We will start with an already configured repository on TFS and a Pi that runs on Windows IoT Core. In case you still need to install Windows IoT Core on your Pi you can follow these [Get Started](https://developer.microsoft.com/en-us/windows/iot/GetStarted) instructions.  
 
 ![pi-tfs](http://res.cloudinary.com/dcgoisyp0/image/upload/b_rgb:fff,bo_0px_solid_rgb:000,c_scale,q_100,r_0,w_348/v1482185390/pi-tfs.png)
 
-By browsing to the IP address of your Pi (Port 8080) you will get the Pi's Dashboard. Under App File Explorer you can add a mp3 file that you wish to play when a build fails. Remember the name and location of the mp3 file.
+By browsing to the IP address of your Pi (Port 8080) you will get the Pi's Dashboard. Add the mp3 file under the CameraRoll directory in the App File Explorer tab. This is the sound that will play when a build fails.
 
 ## 2. Code
 ### 2.1. Project Architecture
 
-To my knowledge there (still) isn’t a native Web Api template for IoT devices. But luckily for us there is a library called [Restup](https://github.com/tomkuijsten/restup) that enables us to create a webservice and host it on a RaspberryPI.
+To my knowledge there (still) isn’t a native Web Api template for IoT devices. But luckily for us there is a library called [Restup](https://github.com/tomkuijsten/restup) that enables us to create a webservice and host it on a IoT device.
 
 The Solution will contain 2 projects:
 
-1. The **Soundboard.Api** project (hosting the Soundboard API)
-
-2. The **Soundboard.Startup** project (initialising the API).
+1. The **Soundboard.Api** project
+2. The **Soundboard.Startup** project
 
 <script src="https://gist.github.com/talipovdaniyar/128a4556101207d12401f186125ea2a4.js"></script>
 
-
 ### 2.2. Soundboard.Api
+The Soundboard.Api project is a basic Class Library (Universal Windows). The only package you will have to include is [Restup](https://www.nuget.org/packages/Restup/).
 
-#### 2.2.1. Data Transfer Object
-The DTO that TFS will include in the POST call has really a lot of information. You could not only play a sound but even ligth up a red light bulb if a specific developer broke the build.
+#### Data Transfer Object
+The Api will be triggered by a POST call from a TFS webhook. I extracted The DTO structure from the POST call and this is what it looks like:
+<br/>
+<script src="https://gist.github.com/talipovdaniyar/958183939a53829b7ac7ffc356538269.js"></script>
 
-
-#### 2.2.2. Controller
-
-First we will start of with the Soundboard.Api project, it’s a Windows Portable Library project. After creating the project, include the Restup nuget in your project. Now you should be able to start building the SoundboardController. We have to add some references to Media libraries for playing the sound located on the Raspberry Pi. The rest of the code syntax looks a lot like the ASP.net controllers syntax. Most of the code logic is currently located in the controller but should be moved to a service layer if the logic grows.
-
-Snippet CONTROLLER
+With all that data you can let your imagination go wild and build some really cool features. Like e.g. light up a red lightbulb if the build is broken or even assign different lightbulbs to different developers.
 
 
+#### Controller
 
-#### 2.1.2. Soundboard.Startup
-Now we will create the IoT Service project with the following code in the main class.
+Now we can start with building the SoundboardController. We need the Windows.Media references for playing the sound, located in the CameraRoll directory. The rest of the code syntax should be familiar to anyone who has some Web Api experience.
+<br/>
+<script src="https://gist.github.com/talipovdaniyar/0b09f8f1069f5a29b9cb0da8370ca85e.js"></script>
 
-As you can see the start method initialises the Api. Now try to deploy it to your Pi by pressing F5 but keep in mind that the running setting should be set on “Remote”. Once the deploy is finished you can test the Web Service by sending a POST with a HTTP client like Postman. Don’t forget to include Basic Authentication. By now you should hear the sound that you put on your Pi.
+Most of the sound playing code is currently located in the controller but should be moved to a service layer if you plan on expanding the features.
+
+#### ApiStartup
+
+The ApiStartup is the entrypoint for the IoT Background Service and it will be responsible for registering the controllers and starting the webservice on port 8800.
+<br/>
+<script src="https://gist.github.com/talipovdaniyar/96f54ee1e769de3d3fd017083265f7ff.js"></script>
+
+### 2.3. Soundboard.Daemon
+
+#### StartupTask
+Now we will create the Soundboard.Daemon project, it's a Background Application (IoT). After creating the project you will notice that it already has the StartupTask.cs file. This will be the starting point of the whole Application. This StartupTask will initialise the Api.
+<br/>
+<script src="https://gist.github.com/talipovdaniyar/dcac9c936126a7a4dc464a25d99a4ca8.js"></script>
+
+#### Appxmanifest
+You will have to include some extra configurations to use features of your Pi. Make sure the following capabilities are included in the Package.appxmanifest.
+<br/>
+<script src="https://gist.github.com/talipovdaniyar/e5ee6d54ceac23dc3d68b5ca53b12dc8.js"></script>
+
+### 2.4. Deploy
+
+You can deploy your app to your Pi by running the app in Visual Studio. Make sure you run the app with the Remote Machine configuration and the platform is set to ARM. Once the app is running on your Pi it will stay on the Pi until you remove it manually. If you want to add it to the startup of your Pi you can do it by opening the Apps tab on the Pi Dashboard screen.
+
+Once your app is deployed, I recommend you to first test your webservice with a Rest Client, I used [Postman](https://www.getpostman.com/)
 
 ## 3. TFS
-Now that the Raspberry Pi listens to Post requests we only need to configure TFS. Open your TFS dashboard and head to settings. Under setting you will have to create a WebHook a Build event on TFS. Select to which build event
+Now that the Raspberry Pi listens to POST requests we only need to configure TFS. You can follow this [explanation](https://www.visualstudio.com/en-us/docs/integrate/get-started/service-hooks/services/webhooks) for configuring webhooks on your TFS repository.
+
+## 4. Conclusion
+Initially this small project started as an inside joke. However I do think it can be useful in the development cycle. Just make sure that everyone agrees to the new soundboard notifier. Inform the less tech-savvy people about what a RaspberryPi is and reassure them you aren't sniffing the network traffic.
+
+[<img src="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482595813/button_get-code_mtnyv7.png">](https://github.com/talipovdaniyar/PiSoundBoard)
