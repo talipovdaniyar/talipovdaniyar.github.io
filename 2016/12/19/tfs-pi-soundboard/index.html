@@ -6,25 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Soviet Waffle&#39;s Blog">
-    <title>Hello, Blogging! - Soviet Waffle&#39;s Blog</title>
+    <title>Hear your TFS Builds fail with a Raspberry Pi Soundboard - Soviet Waffle&#39;s Blog</title>
     <meta name="author" content="Daniyar Talipov">
+    
+        <meta name="keywords" content="IoT,Windows IoT Core,Internet of Things,Team Foundation Server,TFS 2017,RaspberryPi,C#">
     
     
         <link rel="icon" href="http://sovietwaffle.ninja/assets/images/favicon.ico">
     
     
-    <meta name="description" content="My first post about who I am and why I started blogging.">
+    <meta name="description" content="Breaking the build is not the end of the world. What’s really important is noticing it on time and fixing it as quick as possible. Therefore you need a notifier that warns you when a build has failed.">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Hello, Blogging!">
-<meta property="og:url" content="http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/index.html">
+<meta property="og:title" content="Hear your TFS Builds fail with a Raspberry Pi Soundboard">
+<meta property="og:url" content="http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/index.html">
 <meta property="og:site_name" content="Soviet Waffle's Blog">
-<meta property="og:description" content="My first post about who I am and why I started blogging.">
-<meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/v1481468195/sovietwaffle.png">
-<meta property="og:updated_time" content="2016-12-19T22:15:50.000Z">
+<meta property="og:description" content="Breaking the build is not the end of the world. What’s really important is noticing it on time and fixing it as quick as possible. Therefore you need a notifier that warns you when a build has failed.">
+<meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/b_rgb:fff,bo_0px_solid_rgb:000,c_scale,q_100,r_0,w_348/v1482185390/pi-tfs.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482595813/button_get-code_mtnyv7.png">
+<meta property="og:updated_time" content="2016-12-24T16:25:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello, Blogging!">
-<meta name="twitter:description" content="My first post about who I am and why I started blogging.">
-<meta name="twitter:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/v1481468195/sovietwaffle.png">
+<meta name="twitter:title" content="Hear your TFS Builds fail with a Raspberry Pi Soundboard">
+<meta name="twitter:description" content="Breaking the build is not the end of the world. What’s really important is noticing it on time and fixing it as quick as possible. Therefore you need a notifier that warns you when a build has failed.">
+<meta name="twitter:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/b_rgb:fff,bo_0px_solid_rgb:000,c_scale,q_100,r_0,w_348/v1482185390/pi-tfs.png">
 <meta name="twitter:creator" content="@DaniyarTalipov">
     
     
@@ -34,8 +37,8 @@
         <meta property="og:image" content="https://www.gravatar.com/avatar/667116e5c66642b6405719db87de05be?s=640"/>
     
     
-        <meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/c_scale,q_34,w_196/v1481468195/sovietwaffle.png"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://res.cloudinary.com/dcgoisyp0/image/upload/c_scale,q_34,w_196/v1481468195/sovietwaffle.png" />
+        <meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482276781/pi-tfs-thumb.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482276781/pi-tfs-thumb.png" />
     
     
     
@@ -210,13 +213,13 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Hello, Blogging!
+            Hear your TFS Builds fail with a Raspberry Pi Soundboard
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-12-11T15:28:15+01:00">
+    <time itemprop="datePublished" datetime="2016-12-19T21:35:54+01:00">
 	
-		    Dec 11, 2016
+		    Dec 19, 2016
     	
     </time>
     
@@ -226,12 +229,46 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <!-- excerpt --><br>I hope you understood the “Hello, World!” reference. If not, “Hello, World!” is often the first program programmers write when they try out a new programming language. It only seemed fitting to name my first blogpost with the traditional “Hello, World!” program in mind.</p>
-<h2 id="Who-am-I"><a href="#Who-am-I" class="headerlink" title="Who am I?"></a>Who am I?</h2><p>My name is Daniyar Talipov, I am a programmer from Belgium and IT is my passion. For as long as I can remember I was always surrounded by technology. This eventually led to me getting a bachelor’s degree in Applied Computer Science from <a href="http://www.odisee.be/en" target="_blank" rel="external">Odisee Brussels</a> and landing a job as a .NET Software Engineer at <a href="http://www.realdolmen.com/" target="_blank" rel="external">RealDolmen</a>.</p>
-<p>I am currently working for the Belgian Department of Home Affairs on different applications. In my free time I read books about programming, work on side projects and (still) play video games.</p>
-<h2 id="Why-blogging"><a href="#Why-blogging" class="headerlink" title="Why blogging?"></a>Why blogging?</h2><p>I’m a guy that likes to share information and knowledge, especially if it’s helpful to someone. I don’t consider myself a guru (yet), however I did notice having a passion and drive to learn new things. This often leads to sleepless weekends, but more often it leads to knowledge.  It only seemed fair, after all these years reading blogs to give back some of that acquired knowledge back to the community through the power of the internet!</p>
-<h2 id="Why-Soviet-Waffle"><a href="#Why-Soviet-Waffle" class="headerlink" title="Why Soviet Waffle?"></a>Why Soviet Waffle?</h2><p>After living most of my life in Belgium I consider myself a real Belgian, that’s where the Waffle plays its part. However I wasn’t born in Belgium, I was born in Kazakhstan (once a part of the Soviet Union). Combining those two milestones in my life, gave birth to <strong>Soviet Waffle</strong>.</p>
-<p><img src="http://res.cloudinary.com/dcgoisyp0/image/upload/v1481468195/sovietwaffle.png" alt="soviet-waffle"></p>
+            <!-- excerpt --></p>
+<p>Breaking the build can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.</p>
+<h2 id="Fail-Fast"><a href="#Fail-Fast" class="headerlink" title="Fail-Fast"></a>Fail-Fast</h2><p>It’s crucial to have a <a href="https://en.wikipedia.org/wiki/Fail-fast" target="_blank" rel="external">fail-fast</a> development flow, but that’s not always the case. There are alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even <a href="https://github.com/codedance/Retaliation" target="_blank" rel="external">shoot missiles</a> at the culprit.</p>
+<p>However I decided to build one of my own. A webservice that plays the sound of Septa Unella’s bell if a build fails.<br><br></p>
+<iframe src="//giphy.com/embed/Ob7p7lDT99cd2" width="480" height="268" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+
+<h2 id="1-Setup"><a href="#1-Setup" class="headerlink" title="1. Setup"></a>1. Setup</h2><p>The webservice will be hosted on a RaspberryPi 2 and will be triggered by Team Foundation Server 2017. We will start with an already configured repository on TFS and a Pi that runs on Windows IoT Core. In case you still need to install Windows IoT Core on your Pi you can follow these <a href="https://developer.microsoft.com/en-us/windows/iot/GetStarted" target="_blank" rel="external">Get Started</a> instructions.  </p>
+<p><img src="http://res.cloudinary.com/dcgoisyp0/image/upload/b_rgb:fff,bo_0px_solid_rgb:000,c_scale,q_100,r_0,w_348/v1482185390/pi-tfs.png" alt="pi-tfs"></p>
+<p>By browsing to the IP address of your Pi (Port 8080) you will get the Pi’s Dashboard. Add the mp3 file under the CameraRoll directory in the App File Explorer tab. This is the sound that will play when a build fails.</p>
+<h2 id="2-Code"><a href="#2-Code" class="headerlink" title="2. Code"></a>2. Code</h2><h3 id="2-1-Project-Architecture"><a href="#2-1-Project-Architecture" class="headerlink" title="2.1. Project Architecture"></a>2.1. Project Architecture</h3><p>To my knowledge there (still) isn’t a native Web Api template for IoT devices. But luckily for us there is a library called <a href="https://github.com/tomkuijsten/restup" target="_blank" rel="external">Restup</a> that enables us to create a webservice and host it on a IoT device.</p>
+<p>The Solution will contain 2 projects:</p>
+<ol>
+<li>The <strong>Soundboard.Api</strong> project</li>
+<li>The <strong>Soundboard.Startup</strong> project</li>
+</ol>
+<script src="https://gist.github.com/talipovdaniyar/128a4556101207d12401f186125ea2a4.js"></script>
+
+<h3 id="2-2-Soundboard-Api"><a href="#2-2-Soundboard-Api" class="headerlink" title="2.2. Soundboard.Api"></a>2.2. Soundboard.Api</h3><p>The Soundboard.Api project is a basic Class Library (Universal Windows). The only package you will have to include is <a href="https://www.nuget.org/packages/Restup/" target="_blank" rel="external">Restup</a>.</p>
+<h4 id="Data-Transfer-Object"><a href="#Data-Transfer-Object" class="headerlink" title="Data Transfer Object"></a>Data Transfer Object</h4><p>The Api will be triggered by a POST call from a TFS webhook. I extracted The DTO structure from the POST call and this is what it looks like:<br><br></p>
+<script src="https://gist.github.com/talipovdaniyar/958183939a53829b7ac7ffc356538269.js"></script>
+
+<p>With all that data you can let your imagination go wild and build some really cool features. Like e.g. light up a red lightbulb if the build is broken or even assign different lightbulbs to different developers.</p>
+<h4 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h4><p>Now we can start with building the SoundboardController. We need the Windows.Media references for playing the sound, located in the CameraRoll directory. The rest of the code syntax should be familiar to anyone who has some Web Api experience.<br><br></p>
+<script src="https://gist.github.com/talipovdaniyar/0b09f8f1069f5a29b9cb0da8370ca85e.js"></script>
+
+<p>Most of the sound playing code is currently located in the controller but should be moved to a service layer if you plan on expanding the features.</p>
+<h4 id="ApiStartup"><a href="#ApiStartup" class="headerlink" title="ApiStartup"></a>ApiStartup</h4><p>The ApiStartup is the entrypoint for the IoT Background Service and it will be responsible for registering the controllers and starting the webservice on port 8800.<br><br></p>
+<script src="https://gist.github.com/talipovdaniyar/96f54ee1e769de3d3fd017083265f7ff.js"></script>
+
+<h3 id="2-3-Soundboard-Daemon"><a href="#2-3-Soundboard-Daemon" class="headerlink" title="2.3. Soundboard.Daemon"></a>2.3. Soundboard.Daemon</h3><h4 id="StartupTask"><a href="#StartupTask" class="headerlink" title="StartupTask"></a>StartupTask</h4><p>Now we will create the Soundboard.Daemon project, it’s a Background Application (IoT). After creating the project you will notice that it already has the StartupTask.cs file. This will be the starting point of the whole Application. This StartupTask will initialise the Api.<br><br></p>
+<script src="https://gist.github.com/talipovdaniyar/dcac9c936126a7a4dc464a25d99a4ca8.js"></script>
+
+<h4 id="Appxmanifest"><a href="#Appxmanifest" class="headerlink" title="Appxmanifest"></a>Appxmanifest</h4><p>You will have to include some extra configurations to use features of your Pi. Make sure the following capabilities are included in the Package.appxmanifest.<br><br></p>
+<script src="https://gist.github.com/talipovdaniyar/e5ee6d54ceac23dc3d68b5ca53b12dc8.js"></script>
+
+<h3 id="2-4-Deploy"><a href="#2-4-Deploy" class="headerlink" title="2.4. Deploy"></a>2.4. Deploy</h3><p>You can deploy your app to your Pi by running the app in Visual Studio. Make sure you run the app with the Remote Machine configuration and the platform is set to ARM. Once the app is running on your Pi it will stay on the Pi until you remove it manually. If you want to add it to the startup of your Pi you can do it by opening the Apps tab on the Pi Dashboard screen.</p>
+<p>Once your app is deployed, I recommend you to first test your webservice with a Rest Client, I used <a href="https://www.getpostman.com/" target="_blank" rel="external">Postman</a></p>
+<h2 id="3-TFS"><a href="#3-TFS" class="headerlink" title="3. TFS"></a>3. TFS</h2><p>Now that the Raspberry Pi listens to POST requests we only need to configure TFS. You can follow this <a href="https://www.visualstudio.com/en-us/docs/integrate/get-started/service-hooks/services/webhooks" target="_blank" rel="external">explanation</a> for configuring webhooks on your TFS repository.</p>
+<h2 id="4-Conclusion"><a href="#4-Conclusion" class="headerlink" title="4. Conclusion"></a>4. Conclusion</h2><p>Initially this small project started as an inside joke. However I do think it can be useful in the development cycle. Just make sure that everyone agrees to the new soundboard notifier. Inform the less tech-savvy people about what a RaspberryPi is and reassure them you aren’t sniffing the network traffic.</p>
+<p><a href="https://github.com/talipovdaniyar/PiSoundBoard" target="_blank" rel="external"><img src="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482595813/button_get-code_mtnyv7.png"></a></p>
             
         </div>
     </div>
@@ -240,7 +277,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/Personal/">Personal</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/C/">C#</a> <a class="tag tag--primary tag--small t-link" href="/tags/RaspberryPi/">RaspberryPi</a> <a class="tag tag--primary tag--small t-link" href="/tags/TFS/">TFS</a> <a class="tag tag--primary tag--small t-link" href="/tags/Windows-IoT-Core/">Windows IoT Core</a>
 
             </div>
         
@@ -249,7 +286,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/19/tfs-pi-soundboard/"  data-tooltip="Hear your TFS Builds fail with a Raspberry Pi Soundboard">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -257,7 +294,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/11/Hello-Blogging/" data-tooltip="Hello, Blogging!">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -272,17 +309,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -320,7 +357,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/19/tfs-pi-soundboard/"  data-tooltip="Hear your TFS Builds fail with a Raspberry Pi Soundboard">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -328,7 +365,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/11/Hello-Blogging/" data-tooltip="Hello, Blogging!">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -343,17 +380,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -373,17 +410,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="5">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://sovietwaffle.ninja/2016/12/11/Hello-Blogging/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://sovietwaffle.ninja/2016/12/19/tfs-pi-soundboard/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
