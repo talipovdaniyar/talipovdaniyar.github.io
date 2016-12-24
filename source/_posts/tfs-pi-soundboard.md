@@ -1,6 +1,6 @@
 ---
 title: Hear your TFS Builds fail with a Raspberry Pi Soundboard
-date: 2016-12-19 21:35:54
+date: 2016-12-24 21:35:54
 thumbnailImage: http://res.cloudinary.com/dcgoisyp0/image/upload/v1482276781/pi-tfs-thumb.png
 autoThumbnailImage: yes
 thumbnailImagePosition: left
@@ -26,7 +26,7 @@ Breaking the build is not the end of the world. What's really important is notic
 Breaking the build can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.
 
 ## Fail-Fast
-It's crucial to have a [fail-fast](https://en.wikipedia.org/wiki/Fail-fast) development flow, but that's not always the case. There are alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even [shoot missiles](https://github.com/codedance/Retaliation) at the culprit.
+It's crucial to have a [fail-fast](https://en.wikipedia.org/wiki/Fail-fast) development flow, but that's not always the case. There are alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even [shooting missiles](https://github.com/codedance/Retaliation) at the culprit.
 
 However I decided to build one of my own. A webservice that plays the sound of Septa Unella's bell if a build fails.
 <br>
@@ -95,9 +95,9 @@ You can deploy your app to your Pi by running the app in Visual Studio. Make sur
 Once your app is deployed, I recommend you to first test your webservice with a Rest Client, I used [Postman](https://www.getpostman.com/)
 
 ## 3. TFS
-Now that the Raspberry Pi listens to POST requests we only need to configure TFS. You can follow this [explanation](https://www.visualstudio.com/en-us/docs/integrate/get-started/service-hooks/services/webhooks) for configuring webhooks on your TFS repository.
+Now that the Raspberry Pi can handle the POST requests, we only need to configure TFS. You can follow this [explanation](https://www.visualstudio.com/en-us/docs/integrate/get-started/service-hooks/services/webhooks) for configuring webhooks on your TFS repository.
 
 ## 4. Conclusion
-Initially this small project started as an inside joke. However I do think it can be useful in the development cycle. Just make sure that everyone agrees to the new soundboard notifier. Inform the less tech-savvy people about what a RaspberryPi is and reassure them you aren't sniffing the network traffic.
+Initially this small project started as an inside joke. However, I do think it can be useful in the development cycle. Just make sure that everyone agrees to the new soundboard notifier. Inform the less tech-savvy colleagues about what a RaspberryPi is and reassure them you aren't sniffing the network traffic.
 
 [<img src="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482595813/button_get-code_mtnyv7.png">](https://github.com/talipovdaniyar/PiSoundBoard)
