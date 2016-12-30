@@ -25,8 +25,7 @@ Breaking the build is not the end of the world. What's really important is notic
 
 Breaking the build, it can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.
 
-## Fail-Fast
-It's crucial to have a [fail-fast](https://en.wikipedia.org/wiki/Fail-fast) development flow, but that's not always the case. There are alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even [shooting missiles](https://github.com/codedance/Retaliation) at the culprit.
+It's crucial to have a [fail-fast](https://en.wikipedia.org/wiki/Fail-fast) development flow. There are good alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even [shooting missiles](https://github.com/codedance/Retaliation) at the culprit.
 
 However I decided to build one of my own. A webservice that plays the sound of Septa Unella's bell if a build fails.
 <br>
@@ -100,4 +99,5 @@ Now that the Raspberry Pi can handle the POST requests, we only need to configur
 ## 4. Conclusion
 Initially this small project started as an inside joke. However, I do think it can be useful in the development cycle. Just make sure that everyone agrees to the new soundboard notifier. Inform the less tech-savvy colleagues about what a RaspberryPi is and reassure them you aren't sniffing the network traffic.
 
-[<img src="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482595813/button_get-code_mtnyv7.png">](https://github.com/talipovdaniyar/PiSoundBoard)
+<a class="post-action-btn btn btn--success" href="https://github.com/talipovdaniyar/PiSoundBoard"><i class="fa fa-github"></i> Get Code</a>
+</br>
