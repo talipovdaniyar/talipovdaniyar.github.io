@@ -22,8 +22,7 @@
 <meta property="og:site_name" content="Soviet Waffle's Blog">
 <meta property="og:description" content="Breaking the build is not the end of the world. What’s really important is noticing it on time and fixing it as quickly as possible. Therefore you need a notifier that warns you when a build has faile">
 <meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/b_rgb:fff,bo_0px_solid_rgb:000,c_scale,q_100,r_0,w_348/v1482185390/pi-tfs.png">
-<meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482595813/button_get-code_mtnyv7.png">
-<meta property="og:updated_time" content="2016-12-24T17:27:00.000Z">
+<meta property="og:updated_time" content="2016-12-30T00:54:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hear your TFS Builds fail with a Raspberry Pi Soundboard">
 <meta name="twitter:description" content="Breaking the build is not the end of the world. What’s really important is noticing it on time and fixing it as quickly as possible. Therefore you need a notifier that warns you when a build has faile">
@@ -231,7 +230,7 @@
         <div class="main-content-wrap">
             <!-- excerpt --></p>
 <p>Breaking the build, it can happen to the best of us. Usually when a build fails the concerned developer or the whole dev team receives an email with the stacktrace. But all too often, there is a latency between breaking the build and noticing it being broken. In the worst case scenario this can lead to other developers retrieving broken code and continue building on it.</p>
-<h2 id="Fail-Fast"><a href="#Fail-Fast" class="headerlink" title="Fail-Fast"></a>Fail-Fast</h2><p>It’s crucial to have a <a href="https://en.wikipedia.org/wiki/Fail-fast" target="_blank" rel="external">fail-fast</a> development flow, but that’s not always the case. There are alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even <a href="https://github.com/codedance/Retaliation" target="_blank" rel="external">shooting missiles</a> at the culprit.</p>
+<p>It’s crucial to have a <a href="https://en.wikipedia.org/wiki/Fail-fast" target="_blank" rel="external">fail-fast</a> development flow. There are good alternatives out there, that use more team oriented communication platforms. Like e.g. linking build events to a Slack channel or even <a href="https://github.com/codedance/Retaliation" target="_blank" rel="external">shooting missiles</a> at the culprit.</p>
 <p>However I decided to build one of my own. A webservice that plays the sound of Septa Unella’s bell if a build fails.<br><br></p>
 <iframe src="//giphy.com/embed/Ob7p7lDT99cd2" width="480" height="268" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
 
@@ -268,7 +267,7 @@
 <p>Once your app is deployed, I recommend you to first test your webservice with a Rest Client, I used <a href="https://www.getpostman.com/" target="_blank" rel="external">Postman</a></p>
 <h2 id="3-TFS"><a href="#3-TFS" class="headerlink" title="3. TFS"></a>3. TFS</h2><p>Now that the Raspberry Pi can handle the POST requests, we only need to configure TFS. You can follow this <a href="https://www.visualstudio.com/en-us/docs/integrate/get-started/service-hooks/services/webhooks" target="_blank" rel="external">explanation</a> for configuring webhooks on your TFS repository.</p>
 <h2 id="4-Conclusion"><a href="#4-Conclusion" class="headerlink" title="4. Conclusion"></a>4. Conclusion</h2><p>Initially this small project started as an inside joke. However, I do think it can be useful in the development cycle. Just make sure that everyone agrees to the new soundboard notifier. Inform the less tech-savvy colleagues about what a RaspberryPi is and reassure them you aren’t sniffing the network traffic.</p>
-<p><a href="https://github.com/talipovdaniyar/PiSoundBoard" target="_blank" rel="external"><img src="http://res.cloudinary.com/dcgoisyp0/image/upload/v1482595813/button_get-code_mtnyv7.png"></a></p>
+<p><a class="post-action-btn btn btn--success" href="https://github.com/talipovdaniyar/PiSoundBoard" target="_blank" rel="external"><i class="fa fa-github"></i> Get Code</a><br><br></p>
             
         </div>
     </div>
@@ -324,6 +323,12 @@
             </a>
         </li>
         
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
         <li class="post-action">
             
                 <a class="post-action-btn btn btn--default" href="#">
@@ -336,6 +341,10 @@
 
 
         
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
             
         
     </div>
@@ -394,6 +403,12 @@
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
         
         <li class="post-action">
             
@@ -553,6 +568,23 @@
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
 
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'http://sovietwaffle.ninja/2016/12/24/tfs-pi-soundboard/';
+                 
+                    this.page.identifier = '2016/12/24/tfs-pi-soundboard/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'sovietwaffe';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
     
 
 
