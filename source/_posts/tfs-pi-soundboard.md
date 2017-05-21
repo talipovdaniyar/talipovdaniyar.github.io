@@ -45,13 +45,13 @@ To my knowledge there (still) isn’t a native Web Api template for IoT devices.
 
 The Solution will contain 2 projects:
 
-1. The **Soundboard.Api** project
-2. The **Soundboard.Startup** project
+1. The **PiSoundboard.Api** project
+2. The **PiSoundboard.Daemon** project
 
 <script src="https://gist.github.com/talipovdaniyar/128a4556101207d12401f186125ea2a4.js"></script>
 
-### 2.2. Soundboard.Api
-The Soundboard.Api project is a basic Class Library (Universal Windows). The only package you will have to include is [Restup](https://www.nuget.org/packages/Restup/).
+### 2.2. PiSoundboard.Api
+The PiSoundboard.Api project is a basic Class Library (Universal Windows). The only package you will have to include is [Restup](https://www.nuget.org/packages/Restup/).
 
 #### Data Transfer Object
 The Api will be triggered by a POST call from a TFS webhook. I extracted The DTO structure from the POST call and this is what it looks like:
@@ -75,10 +75,10 @@ The ApiStartup is the entrypoint for the IoT Background Service and it will be r
 <br/>
 <script src="https://gist.github.com/talipovdaniyar/96f54ee1e769de3d3fd017083265f7ff.js"></script>
 
-### 2.3. Soundboard.Daemon
+### 2.3. PiSoundboard.Daemon
 
 #### StartupTask
-Now we will create the Soundboard.Daemon project, it's a Background Application (IoT). After creating the project you will notice that it already has the StartupTask.cs file. This will be the starting point of the whole Application. This StartupTask will initialise the Api.
+Now we will create the PiSoundboard.Daemon project, it's a Background Application (IoT). After creating the project you will notice that it already has the StartupTask.cs file. This will be the starting point of the whole Application. This StartupTask will initialise the Api.
 <br/>
 <script src="https://gist.github.com/talipovdaniyar/dcac9c936126a7a4dc464a25d99a4ca8.js"></script>
 
