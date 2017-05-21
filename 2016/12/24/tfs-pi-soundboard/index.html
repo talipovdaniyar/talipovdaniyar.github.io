@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Soviet Waffle's Blog">
 <meta property="og:description" content="Breaking the build is not the end of the world. What’s really important is noticing it on time and fixing it as quickly as possible. Therefore you need a notifier that warns you when a build has faile">
 <meta property="og:image" content="http://res.cloudinary.com/dcgoisyp0/image/upload/b_rgb:fff,bo_0px_solid_rgb:000,c_scale,q_100,r_0,w_348/v1482185390/pi-tfs.png">
-<meta property="og:updated_time" content="2016-12-30T00:54:47.000Z">
+<meta property="og:updated_time" content="2017-05-21T14:42:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hear your TFS Builds fail with a Raspberry Pi Soundboard">
 <meta name="twitter:description" content="Breaking the build is not the end of the world. What’s really important is noticing it on time and fixing it as quickly as possible. Therefore you need a notifier that warns you when a build has faile">
@@ -240,12 +240,12 @@
 <h2 id="2-Code"><a href="#2-Code" class="headerlink" title="2. Code"></a>2. Code</h2><h3 id="2-1-Project-Architecture"><a href="#2-1-Project-Architecture" class="headerlink" title="2.1. Project Architecture"></a>2.1. Project Architecture</h3><p>To my knowledge there (still) isn’t a native Web Api template for IoT devices. But luckily for us there is a library called <a href="https://github.com/tomkuijsten/restup" target="_blank" rel="external">Restup</a> that enables us to create a webservice and host it on a IoT device.</p>
 <p>The Solution will contain 2 projects:</p>
 <ol>
-<li>The <strong>Soundboard.Api</strong> project</li>
-<li>The <strong>Soundboard.Startup</strong> project</li>
+<li>The <strong>PiSoundboard.Api</strong> project</li>
+<li>The <strong>PiSoundboard.Daemon</strong> project</li>
 </ol>
 <script src="https://gist.github.com/talipovdaniyar/128a4556101207d12401f186125ea2a4.js"></script>
 
-<h3 id="2-2-Soundboard-Api"><a href="#2-2-Soundboard-Api" class="headerlink" title="2.2. Soundboard.Api"></a>2.2. Soundboard.Api</h3><p>The Soundboard.Api project is a basic Class Library (Universal Windows). The only package you will have to include is <a href="https://www.nuget.org/packages/Restup/" target="_blank" rel="external">Restup</a>.</p>
+<h3 id="2-2-PiSoundboard-Api"><a href="#2-2-PiSoundboard-Api" class="headerlink" title="2.2. PiSoundboard.Api"></a>2.2. PiSoundboard.Api</h3><p>The PiSoundboard.Api project is a basic Class Library (Universal Windows). The only package you will have to include is <a href="https://www.nuget.org/packages/Restup/" target="_blank" rel="external">Restup</a>.</p>
 <h4 id="Data-Transfer-Object"><a href="#Data-Transfer-Object" class="headerlink" title="Data Transfer Object"></a>Data Transfer Object</h4><p>The Api will be triggered by a POST call from a TFS webhook. I extracted The DTO structure from the POST call and this is what it looks like:<br><br></p>
 <script src="https://gist.github.com/talipovdaniyar/958183939a53829b7ac7ffc356538269.js"></script>
 
@@ -257,7 +257,7 @@
 <h4 id="ApiStartup"><a href="#ApiStartup" class="headerlink" title="ApiStartup"></a>ApiStartup</h4><p>The ApiStartup is the entrypoint for the IoT Background Service and it will be responsible for registering the controllers and starting the webservice on port 8800.<br><br></p>
 <script src="https://gist.github.com/talipovdaniyar/96f54ee1e769de3d3fd017083265f7ff.js"></script>
 
-<h3 id="2-3-Soundboard-Daemon"><a href="#2-3-Soundboard-Daemon" class="headerlink" title="2.3. Soundboard.Daemon"></a>2.3. Soundboard.Daemon</h3><h4 id="StartupTask"><a href="#StartupTask" class="headerlink" title="StartupTask"></a>StartupTask</h4><p>Now we will create the Soundboard.Daemon project, it’s a Background Application (IoT). After creating the project you will notice that it already has the StartupTask.cs file. This will be the starting point of the whole Application. This StartupTask will initialise the Api.<br><br></p>
+<h3 id="2-3-PiSoundboard-Daemon"><a href="#2-3-PiSoundboard-Daemon" class="headerlink" title="2.3. PiSoundboard.Daemon"></a>2.3. PiSoundboard.Daemon</h3><h4 id="StartupTask"><a href="#StartupTask" class="headerlink" title="StartupTask"></a>StartupTask</h4><p>Now we will create the PiSoundboard.Daemon project, it’s a Background Application (IoT). After creating the project you will notice that it already has the StartupTask.cs file. This will be the starting point of the whole Application. This StartupTask will initialise the Api.<br><br></p>
 <script src="https://gist.github.com/talipovdaniyar/dcac9c936126a7a4dc464a25d99a4ca8.js"></script>
 
 <h4 id="Appxmanifest"><a href="#Appxmanifest" class="headerlink" title="Appxmanifest"></a>Appxmanifest</h4><p>You will have to include some extra configurations to use features of your Pi. Make sure the following capabilities are included in the Package.appxmanifest.<br><br></p>
@@ -354,7 +354,7 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2016 Daniyar Talipov. All Rights Reserved.
+        Copyrights &copy; 2017 Daniyar Talipov. All Rights Reserved.
     </span>
 </footer>
 
